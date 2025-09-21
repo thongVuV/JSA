@@ -6,9 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        <li>danh sách 1 </li>
-    </ul>
+    <header>
+        <section class ="landing_page">
+            <nav>
+                <a href="index.html"><img src="assets/img/logo.png" alt="logo" class="logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                        <li><a href="account.html">Tài khoản</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+        </section>
+    </header>
+
+    <h1 style="text-align: center; font-size: 2.5em; margin-top: 30px;">
+        tất cả các sản phẩm
+    </h1>
         <!-- Nút chat có hình con bot -->
     <img id="chatbot-btn" src="assets/img/chat.png" alt="Chatbot" style="
         position: fixed;
@@ -35,7 +53,7 @@
         box-shadow: 0 2px 16px rgba(0,0,0,0.2);
         z-index: 1001;
     ">
-<div id="chatbox" style="display: none; ...">
+<div id="chatbox" style="display: none;">
     <iframe 
         src="https://www.chatbase.co/chatbot-iframe/UN6lqW0OG_sZ4u_pL5VPx"
         width="100%" height="100%" frameborder="0">
