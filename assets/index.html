@@ -1,64 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DirtyCoins</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <section class ="landing_page">
-            <nav>
-                <a href="index.html"><img src="assets/img/logo.png" alt="logo" class="logo"></a>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul>
-                        <li><a href="index.html">Trang chủ</a></li>
-                        <li><a href="products.html">Sản phẩm</a></li>
-                        <li><a href="about.html">Về chúng tôi</a></li>
-                        <li><a href="contact.html">Liên hệ</a></li>
-                        <li><a href="account.html">Tài khoản</a></li>
-                    </ul>
-                </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
-        </section>
-    </header>
 
-    <h1 style="text-align: center; font-size: 2.5em; margin-top: 30px;">
-        tất cả các sản phẩm
-    </h1>
-        <!-- Nút chat có hình con bot -->
-    <img id="chatbot-btn" src="assets/img/chat.png" alt="Chatbot" style="
-        position: fixed;
-        bottom: 24px;
-        right: 24px;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        cursor: pointer;
-        z-index: 1000;
-    ">
-        <!-- Ô chat nhỏ (ẩn mặc định) -->
-    <div id="chatbox" style="
-        display: none;
-        position: fixed;
-        bottom: 100px;
-        right: 24px;
-        width: 350px;
-        height: 450px;
-        background: #fff;
-        border: 1px solid black;
-        border-radius: 12px;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.2);
-        z-index: 1001;
-    ">
-<div id="chatbox" style="display: none;">
-    <iframe 
-        src="https://www.chatbase.co/chatbot-iframe/UN6lqW0OG_sZ4u_pL5VPx"
-        width="100%" height="100%" frameborder="0">
-    </iframe>
+  <!-- Nội dung trang -->
+  <header>
+    <div class="brand">
+      <a href="index.html" class="logo"></a>
+      <div class="logo"><img src="assets/img/logo.jpg" alt="Logo"></div>
+      <div class="brand-name">DirtyCoins</div>
+    </div>
+    <nav class="nav">
+      <a href="#">Trang chủ</a>
+      <a href="#">Sản phẩm</a>
+      <a href="#">Liên hệ</a>
+      <a href="signup.html">Đăng ký</a>
+      <a href="login.html">Đăng nhập</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Sản phẩm</h1>
+    <div class="products">
+      <div class="product">
+        <img src="images/sp1.jpg" alt="Sản phẩm 1">
+        <h4>DirtyCoins Patch In Heart T-Shirt Black</h4>
+        <p class="price">395.000₫</p>
+      </div>
+      <div class="product">
+        <img src="images/sp2.jpg" alt="Sản phẩm 2">
+        <h4>DirtyCoins Patch In Heart T-Shirt White</h4>
+        <p class="price">395.000₫</p>
+      </div>
+      <div class="product">
+        <img src="images/sp3.jpg" alt="Sản phẩm 3">
+        <h4>DirtyCoins Logo Red Wool Knit Scarf</h4>
+        <p class="price">650.000₫</p>
+      </div>
+      <div class="product">
+        <img src="images/sp4.jpg" alt="Sản phẩm 4">
+        <h4>DirtyCoins Logo black Wool Knit Scarf</h4>
+        <p class="price">650.000₫</p>
+      </div>
+      <div class="product">
+        <img src="images/sp5.jpg" alt="Sản phẩm 5">
+        <h4>Soccer Jersey Dico Seven Red Green</h4>
+        <p class="price">520.000₫</p>
+      </div>
+      <div class="product">
+        <img src="images/sp6.jpg" alt="Sản phẩm 6">
+        <h4>Matte DirtyCoins Logo Type Green Iphone Case</h4>
+        <p class="price">125.000₫</p>
+      </div>
+      <div class="product">
+        <img src="images/sp7.jpg" alt="Sản phẩm 7">
+        <h4>DirtyCoins GraffiStar Red Iphone Case</h4>
+        <p class="price">130.000₫</p>
+      </div>
+      <div class="product">
+        <img src="images/sp8.jpg" alt="Sản phẩm 8">
+        <h4>Matte Big Y Logo Brown Iphone Case</h4>
+        <p class="price">135.000₫</p>
+      </div>
+    </div>
+  </main>
+<footer>
+
+<div class="store-system">
+    <h3>Hệ Thống Cửa Hàng</h3>
+    <ul>
+      <li><b>Chi Nhánh Hồ Chí Minh</b></li>
+      <li>Phường Sài Gòn - The New Playground, Tầng B1 Vincom Center Đồng Khởi, 72 Lê Thánh Tôn.</li>
+      <li>Phường An Lạc - Tầng 1 TTTM Aeon Mall Bình Tân, số 1 đường số 17A.</li>
+      <li>Phường Long Bình - Tầng 2 TTTM Vincom Mega Mall Grand Park.</li>
+      <li>Phường Hòa Hưng - 561 Sư Vạn Hạnh.</li>
+      <li>Phường Cầu Ông Lãnh - 160 Nguyễn Cư Trinh.</li>
+      <li>Phường Sài Gòn - The New Playground 26 Lý Tự Trọng.</li>
+      <li>Phường Gò Vấp - 326 Quang Trung.</li>
+      <li>Phường Thủ Dầu Một - 28 Yersin.</li>
+      <br>
+      <li><b>Chi Nhánh Đồng Nai:</b></li>
+      <li>Phường Tam Hiệp - 151A Phan Trung.</li>
+      <br>
+      <li><b>Chi Nhánh Cần Thơ:</b></li>
+      <li>Phường Ninh Kiều - 52 Mậu Thân.</li>
+      <br>
+      <li><b>Chi Nhánh Hà Nội:</b></li>
+      <li>Phường Dương Nội - Tầng 2 TTTM Aeon Mall Hà Đông Khu dân cư Hoàng Văn Thụ.</li>
+      <br>
+      <li><b>Chi Nhánh Hải Phòng:</b></li>
+      <li>Phường An Biên - Tầng 2 TTTM Aeon Mall Hải Phòng Lê Chân số 10 Võ Nguyên Giáp.</li>
+    </ul>
+
+    <p><b>Hotline:</b> 0933 800 190 - 1900252557</p>
+    <p><b>Email:</b> csteamdcs@gmail.com</p>
 </div>
-<script src="script.js"></script>
+
+<small>Copyright © 2025 Dirty Coins Studio. Powered by Sapo</small>
+</footer>
+
+  <!-- Nhúng file JS -->
+  <script src="script.js"></script>
 </body>
 </html>
