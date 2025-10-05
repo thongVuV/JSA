@@ -27,6 +27,7 @@ header nav a {
             justify-content: center;
             gap: 40px;
             margin-top: 40px;
+            padding-top: 70px;
         }
         .auth-box {
             background: #fff;
