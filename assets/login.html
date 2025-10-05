@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Dirty coin</title>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="logo.png" alt="Logo">
+        <img src="logo.jpg" alt="Logo">
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Trang Chủ</a></li>
@@ -20,16 +20,38 @@
       </ul>
     </div>
   </nav>
-    <h2>Login</h2>
-    <form action="index.html" method="get">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br><br>
-        
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br><br>
-        
-        <input type="submit" value="Login">
-    </form>
-<button onclick="window.location.href='signup.html'">nếu chx có tài khoản thì đăng ký</button>
+  <div class="auth-container">
+    <!-- đăng nhập -->
+    <div class="auth-box">
+      <h2>đăng nhập</h2>
+      <form action="index.html" method="get">
+        <label for="login-email">Email của bạn</label>
+        <input type="text" id="login-email" name="username" placeholder="Email của bạn" required>
+        <label for="login-password">Nhập mật khẩu</label>
+        <input type="password" id="login-password" name="password" placeholder="Nhập mật khẩu" required>
+        <input type="submit" value="Đăng nhập">
+      </form>
+      <div class="forgot-link">
+        <a href="#">Quên mật khẩu?</a>
+      </div>
+    </div>
+    <!-- đăng ký -->
+    <div class="auth-box" id="signup">
+      <h2>đăng ký thành viên mới</h2>
+      <form action="index.html" method="get">
+        <label for="signup-firstname">Tên</label>
+        <input type="text" id="signup-firstname" name="firstname" placeholder="Tên" required>
+        <label for="signup-lastname">Họ</label>
+        <input type="text" id="signup-lastname" name="lastname" placeholder="Họ" required>
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" name="email" placeholder="Email" required>
+        <label for="signup-phone">Số điện thoại</label>
+        <input type="tel" id="signup-phone" name="phone" placeholder="Số điện thoại" required>
+        <label for="signup-password">Mật khẩu</label>
+        <input type="password" id="signup-password" name="password" placeholder="Mật khẩu" required>
+        <input type="submit" value="Đăng ký">
+      </form>
+    </div>
+  </div>
 </body>
 </html>
