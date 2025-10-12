@@ -1,3 +1,17 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* Header */
 header {
   background: #111;
   color: #fff;
@@ -9,7 +23,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10;
 }
 
 header .logo img {
@@ -20,7 +34,7 @@ header nav a {
   color: #fff;
   margin-left: 15px;
   text-decoration: none;
-}  
+}
         
         .auth-container {
             display: flex;
