@@ -1,57 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soccer Jersey Dico Seven Red Green</title>
-    <link rel="stylesheet" href="assets/css/detail.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="assets/css/detail.css">
 </head>
 <body>
-    <div class="container">
-        <div class="product-left">
-            <span class="new-arrival">New arrival</span>
-            <div class="product-image">
-                <img src="assets/img/sp5.png" alt="Soccer Jersey Dico Seven Red Green">
-            </div>
-        </div>
+  <header>
+    <a href="index.html" class="back-btn">← Quay lại</a>
+    <h1>Chi tiết sản phẩm</h1>
+  </header>
 
-        <div class="product-right">
-            <h2>Soccer Jersey Dico Seven Red Green</h2>
-            <p class="price">$24,00</p>
-
-            <div class="sizes">
-                <button class="size">Size S</button>
-                <button class="size">Size M</button>
-                <button class="size">Size L</button>
-                <button class="size selected">Size XL</button>
-            </div>
-
-            <button class="add-to-cart" onclick="addToCart()">ADD TO CART</button>
-            <button class="buy-now">BUY NOW</button>
-
-            <div class="details">
-                <h3>Product details:</h3>
-                <ul>
-                    <li>Available sizes: S – M – L – XL</li>
-                    <li>Material: Polyester.</li>
-                    <li>Regular Fit.</li>
-                    <li>All artworks on the polo use sublimation printing.</li>
-                    <li>Patch-embroidered logo on the chest.</li>
-                </ul>
-            </div>
-
-            <div class="size-chart">
-                <h3>Size Chart:</h3>
-                <p>Female model 1m65 - 48kg wearing size M.</p>
-                <img src="sizechart.png" alt="Size Chart">
-            </div>
-        </div>
+  <main class="detail-container">
+    <div class="image">
+      <img id="product-img" src="" alt="">
     </div>
+    <div class="info">
+      <h2 id="product-name"></h2>
+      <p id="product-price" class="price"></p>
+      <p><b>Chất liệu:</b> <span id="product-material"></span></p>
+      <p><b>Form:</b> <span id="product-fit"></span></p>
+      <p><b>Mô tả:</b></p>
+      <ul id="product-details"></ul>
+      <p><b>Người mẫu:</b> <span id="product-model"></span></p>
+      <p><b>Kích cỡ:</b> <span id="product-sizes"></span></p>
+      <div id="size-chart"></div>
+    </div>
+  </main>
 
-    <script>
-        function addToCart() {
-            alert("✅ Added to cart!");
-        }
-    </script>
+  <script>
+    const product = JSON.parse(localStorage.getItem("product"));
+    if (product) {
+      document.getElementById("product-img").src = `assets/img/${product.image}`;
+      document.getElementById("product-name").textContent = product.name;
+      document.getElementById("product-price").textContent = product.price;
+      document.getElementById("product-material").textContent = product.material;
+      document.getElementById("product-fit").textContent = product.fit;
+      document.getElementById("product-model").textContent = product.model;
+      document.getElementById("product-sizes").textContent = product.sizes.join(", ");
+
+      const detailsList = document.getElementById("product-details");
+      product.details.forEach(d => {
+        const li = document.createElement("li");
+        li.textContent = d;
+        detailsList.appendChild(li);
+      });
+
+      if (product.chart) {
+        document.getElementById("size-chart").innerHTML =
+          `<img src="assets/img/${product.chart}" alt="Size Chart" style="width:300px;">`;
+      }
+    } else {
+      document.body.innerHTML = "<h2>Không tìm thấy sản phẩm!</h2>";
+    }
+  </script>
 </body>
 </html>

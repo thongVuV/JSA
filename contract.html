@@ -17,55 +17,167 @@
       <a href="login.html">Đăng nhập</a>
     </nav>
   </header>
-  <main class="main-content">
-    <div class="showroom-list">
-      <h2>DIRTY COINS các showroom trên cả nước</h2>
-      <label for="city">Thành Phố Hồ Chí Minh</label>
-      <div class="showroom-card">
-        <h3>DIRTYCOINS VINCOM CENTER ĐỒNG KHỞI</h3>
-        <p>📍 The New Playground, Tầng B1 Vincom Center Đồng Khởi, 72 Lê Thánh Tôn, Phường Sài Gòn, TP.HCM</p>
-        <p>🕒 Giờ hoạt động: Thứ 2 đến Thứ 6: 10h00 - 22h00; Thứ 7, CN & ngày lễ: 09h00 - 22h00</p>
-        <p>🗺️ Chỉ đường | ☎️ 070 291 9822</p>
-      </div>
-      <div class="showroom-card">
-        <h3>DIRTYCOINS BÌNH TÂN</h3>
-        <p>📍 Tầng 1 TTTM Aeon Mall Bình Tân, số 1 đường số 17A, Phường An Lạc, TP.HCM</p>
-        <p>🕒 Giờ hoạt động: Thứ 2 đến Thứ 6: 10h00 - 22h00; Thứ 7, CN & ngày lễ: 09h00 - 22h00</p>
-        <p>🗺️ Chỉ đường | ☎️ 078 585 2286</p>
-      </div>
-      <div class="showroom-card">
-        <h3>DIRTYCOINS QUẬN 10</h3>
-        <p>📍 561 Sư Vạn Hạnh, Phường Hòa Hưng, TP.HCM</p>
-        <p>🕒 Giờ hoạt động: 9h00 - 22h00 cả chủ nhật và ngày lễ</p>
-        <p>🗺️ Chỉ đường | ☎️ 0775 052 286</p>
-      </div>
-      <!-- Thêm các showroom khác nếu muốn -->
-    </div>
-  </main>
-<footer class="site-footer">
-    <div class="footer-section social-media">
-        <h2>Mạng Xã Hội</h2>
-        <div class="social-icons">
-            <a href="#" aria-label="Facebook" class="social-icon facebook">
-                <img src="facebook-icon-placeholder.png" alt="Facebook"> 
-            </a>
-            <a href="#" aria-label="YouTube" class="social-icon youtube">
-                <img src="youtube-icon-placeholder.png" alt="YouTube">
-            </a>
-            <a href="#" aria-label="Instagram" class="social-icon instagram">
-                <img src="instagram-icon-placeholder.png" alt="Instagram">
-            </a>
+   <div class="filter-section">
+          <label for="city-select" class="filter-label">CHỌN TỈNH THÀNH PHỐ</label>
+          <select id="city-select" class="city-dropdown">
+            <option value="all">Toàn quốc</option>
+            <option value="hcm">Hồ Chí Minh</option>
+            <option value="hn">Hà Nội</option>
+            <option value="dn">Đà Nẵng</option>
+          </select>
         </div>
+      </div>
+
+      <div class="store-list">
+         Store Card 1 
+        <div class="store-card">
+          <h3 class="store-name">DIRTYCOINS VINCOM CENTER ĐỒNG KHỞI</h3>
+          
+          <div class="store-info">
+            <div class="info-row">
+              <span class="icon">📍</span>
+              <p class="info-text">The New Playground, Tầng B1 Vincom Center Đồng Khởi, 72 Lê Thánh Tôn, Phường Sài Gòn, TP.HCM</p>
+            </div>
+            
+            <div class="info-row">
+              <span class="icon">🕐</span>
+              <p class="info-text">Giờ hoạt động thứ 2 đến thứ 6 Từ 10h00 - 22h00; Thứ 7, chủ nhật và ngày lễ: 09h00 - 22h00</p>
+            </div>
+            
+            <div class="info-row actions">
+              <div class="action-item">
+                <span class="icon">🚗</span>
+                <span class="action-text">Chỉ đường</span>
+              </div>
+              <div class="action-item">
+                <span class="icon">📞</span>
+                <span class="action-text">070 291 9822</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         Store Card 2 
+        <div class="store-card">
+          <h3 class="store-name">DIRTYCOINS BÌNH TÂN</h3>
+          
+          <div class="store-info">
+            <div class="info-row">
+              <span class="icon">📍</span>
+              <p class="info-text">Tầng 1 TTTM Aeon Mall Bình Tân, số 1 đường số 17A, Phường An Lạc, TP.HCM</p>
+            </div>
+            
+            <div class="info-row">
+              <span class="icon">🕐</span>
+              <p class="info-text">Giờ hoạt động thứ 2 đến thứ 6 Từ 10h00 - 22h00; Thứ 7, chủ nhật và ngày lễ: 09h00 - 22h00</p>
+            </div>
+            
+            <div class="info-row actions">
+              <div class="action-item">
+                <span class="icon">🚗</span>
+                <span class="action-text">Chỉ đường</span>
+              </div>
+              <div class="action-item">
+                <span class="icon">📞</span>
+                <span class="action-text">078 585 2286</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         Store Card 3 
+        <div class="store-card">
+          <h3 class="store-name">DIRTYCOINS QUẬN 10</h3>
+          
+          <div class="store-info">
+            <div class="info-row">
+              <span class="icon">📍</span>
+              <p class="info-text">561 Sư Vạn Hạnh, Phường Hòa Hưng, TP.HCM</p>
+            </div>
+            
+            <div class="info-row">
+              <span class="icon">🕐</span>
+              <p class="info-text">Giờ hoạt động từ 9h00 - 22h00 cả chủ nhật và ngày lễ</p>
+            </div>
+            
+            <div class="info-row actions">
+              <div class="action-item">
+                <span class="icon">🚗</span>
+                <span class="action-text">Chỉ đường</span>
+              </div>
+              <div class="action-item">
+                <span class="icon">📞</span>
+                <span class="action-text">0775 052 286</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         Store Card 4 
+        <div class="store-card">
+          <h3 class="store-name">DIRTYCOINS QUẬN 1 (FLAGSHIP STORE)</h3>
+          
+          <div class="store-info">
+            <div class="info-row">
+              <span class="icon">📍</span>
+              <p class="info-text">160 Nguyễn Cư Trinh, Phường Cầu Ông Lãnh, TP.HCM</p>
+            </div>
+            
+            <div class="info-row">
+              <span class="icon">🕐</span>
+              <p class="info-text">Giờ hoạt động từ 9h00 - 22h00 cả chủ nhật và ngày lễ</p>
+            </div>
+            
+            <div class="info-row actions">
+              <div class="action-item">
+                <span class="icon">🚗</span>
+                <span class="action-text">Chỉ đường</span>
+              </div>
+              <div class="action-item">
+                <span class="icon">📞</span>
+                <span class="action-text">028 3837 8888</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+
+    <div class="map-panel">
+      <div class="map-header">
+        <h2 class="map-title">Vincom Center Dong Khoi</h2>
+        <p class="map-address">72 Lê Thánh Tôn, Phường Sài Gòn, Quận 1, Thành phố Hồ Chí Minh</p>
+        <div class="map-rating">
+          <span class="rating-score">4.4</span>
+          <span class="rating-stars">⭐⭐⭐⭐⭐</span>
+          <a href="#" class="rating-link">11,338 reviews</a>
+        </div>
+        <a href="#" class="directions-link">
+          <span class="directions-icon">🧭</span>
+          Directions
+        </a>
+        <a href="#" class="view-larger">View larger map</a>
+      </div>
+      
+      <iframe 
+        class="google-map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4609464152665!2d106.70086731533429!3d10.776448292320195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4b3330bcc9%3A0x5ecb559bb581b953!2sVincom%20Center%20%C4%90%E1%BB%93ng%20Kh%E1%BB%9Fi!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
 
     <div class="footer-section policies">
         <h2>Chính Sách</h2>
         <ul class="policy-list">
-            <li><a href="#">Chính sách bảo mật</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Chính sách Thẻ Thành viên</a></li>
-            <li><a href="#">Chính sách Bảo hành & Đổi trả</a></li>
-            <li><a href="#">Chính sách giao hàng hỏa tốc</a></li>
+            <li><a>Chính sách bảo mật</a></li>
+            <li><a>FAQ</a></li>
+            <li><a>Chính sách Thẻ Thành viên</a></li>
+            <li><a>Chính sách Bảo hành & Đổi trả</a></li>
+            <li>Chính sách giao hàng hỏa tốc</a></li>
         </ul>
     </div>
 

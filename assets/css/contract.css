@@ -1,4 +1,14 @@
-/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  overflow: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +33,11 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10;
+}
+
+header .logo img {
+  height: 50px;
 }
 
 header nav a {
@@ -32,8 +46,314 @@ header nav a {
   text-decoration: none;
 }
 
-.brand-name {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-left: 10px;
+.store-locator {
+  display: flex;
+  height: 100vh;
+  width: 100%;
 }
+
+/* Left Panel - Store List */
+.store-list-panel {
+  width: 50%;
+  height: 100vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+}
+
+.panel-header {
+  padding: 40px 40px 30px;
+  background: #f8f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #666;
+  letter-spacing: 0.5px;
+}
+
+.city-dropdown {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.city-dropdown:hover {
+  border-color: #999;
+}
+
+.city-dropdown:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.store-list {
+  padding: 0 40px 40px;
+}
+
+/* Store Card */
+.store-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 20px;
+  background: white;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.store-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.store-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.store-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.info-row.actions {
+  display: flex;
+  gap: 30px;
+  margin-top: 8px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.action-item:hover {
+  color: #0066cc;
+}
+
+.action-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Right Panel - Map */
+.map-panel {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  max-width: 350px;
+}
+
+.map-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.map-address {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.map-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.rating-score {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.rating-stars {
+  font-size: 0.9rem;
+}
+
+.rating-link {
+  font-size: 0.85rem;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.rating-link:hover {
+  text-decoration: underline;
+}
+
+.directions-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.directions-link:hover {
+  text-decoration: underline;
+}
+
+.directions-icon {
+  font-size: 1.1rem;
+}
+
+.view-larger {
+  display: block;
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.view-larger:hover {
+  text-decoration: underline;
+}
+
+.google-map {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Scrollbar Styling */
+.store-list-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.store-list-panel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.store-list-panel::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.store-list-panel::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .store-locator {
+    flex-direction: column;
+  }
+
+  .store-list-panel,
+  .map-panel {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .panel-header {
+    padding: 20px;
+  }
+
+  .store-list {
+    padding: 0 20px 20px;
+  }
+
+  .map-header {
+    max-width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.2rem;
+  }
+
+  .store-card {
+    padding: 20px;
+  }
+
+  .store-name {
+    font-size: 1rem;
+  }
+
+  .info-text,
+  .action-text {
+    font-size: 0.85rem;
+  }
+
+  .map-header {
+    padding: 15px;
+  }
+
+  .map-title {
+    font-size: 1rem;
+  }
+}
+html, body {
+  height: auto;           /* Đảm bảo chiều cao trang mở rộng theo nội dung */
+  overflow-y: auto;       /* Bật cuộn dọc */
+  margin: 0;              /* Xóa margin mặc định */
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth; /* Cuộn mượt */
+}
+

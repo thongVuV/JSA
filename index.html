@@ -1,125 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dirty Coins</title>
   <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Nội dung trang -->
+  <!-- Header -->
   <header>
-    <div class="brand">
-      <a href="index.html" class="logo"></a>
-      <div class="logo"><img src="assets/img/logo.jpg" alt="Logo"></div>
-      <div class="brand-name">Dirty Coins</div>
+  <div class="brand">
+    <img src="assets/img/logo.jpg" alt="Dirty Coins Logo" class="logo">
+    <span class="brand-name">Dirty Coins</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="contact.html">Liên hệ</a>
+  </nav>
+
+  <div class="right-section">
+    <div class="auth-buttons">
+      <button id="loginBtn" class="auth-btn">Đăng nhập</button>
+      <button id="registerBtn" class="auth-btn">Đăng ký</button>
     </div>
-    <nav class="nav">
-      <a href="index.html">Trang chủ</a>
-      <a href="contract.html">Liên hệ</a>
-      <a href="login.html">Đăng nhập</a>
-    </nav>
-        <div class="cart-container">
-            <a href="#" id="cart-icon" class="cart-icon">
-                <i class="fas fa-shopping-bag"></i>
-                <span id="cart-count" class="badge">0</span>
-            </a>
+    <div class="cart">
+      <i class="fa-solid fa-bag-shopping cart-icon"></i>
+      <span class="cart-count">0</span>
+    </div>
 
-            <div id="cart-dropdown" class="cart-dropdown">
-                <ul id="cart-items" class="cart-items">
-                    <li class="empty-cart-message">Giỏ hàng trống.</li>
-                </ul>
-                <div class="cart-summary">
-                    Tổng cộng: <span id="cart-total">$0.00</span>
-                </div>
-                <a href="#" class="checkout-btn">Thanh toán</a>
-            </div>
-        </div>
-  </header>
+  </div>
+</header>
 
+
+  <!-- Main -->
   <main class="container">
     <h1>Sản phẩm</h1>
-    <div class="products">
-      <div class="product">
-        <img src="assets/img/sp1.png" alt="Sản phẩm 1">
-        <h4>DirtyCoins Patch In Heart T-Shirt Black</h4>
-        <p class="price">395.000₫</p>
-      </div>
-      <div class="product">
-        <img src="assets/img/sp2.png" alt="Sản phẩm 2">
-        <h4>DirtyCoins Patch In Heart T-Shirt White</h4>
-        <p class="price">395.000₫</p>
-      </div>
-      <div class="product">
-        <img src="assets/img/sp3.png" alt="Sản phẩm 3">
-        <h4>DirtyCoins Logo Red Wool Knit Scarf</h4>
-        <p class="price">650.000₫</p>
-      </div>
-      <div class="product">
-        <img src="assets/img/sp4.png" alt="Sản phẩm 4">
-        <h4>DirtyCoins Logo black Wool Knit Scarf</h4>
-        <p class="price">650.000₫</p>
-      </div>
-      <div class="product">
-        <img src="assets/img/sp5.png" alt="Sản phẩm 5">
-        <a href="sp5.html">sản phẩm 5</a>
-        <h4>Soccer Jersey Dico Seven Red Green</h4>
-        <p class="price">520.000₫</p>
-      </div>
-      <div class="product">
-        <img src="assets/img/sp6.png" alt="Sản phẩm 6">
-        <h4>Matte DirtyCoins Logo Type Green Iphone Case</h4>
-        <p class="price">125.000₫</p>
-      </div>
-      <div class="product">
-        <img src="assets/img/sp7.png" alt="Sản phẩm 7">
-        <h4>DirtyCoins GraffiStar Red Iphone Case</h4>
-        <p class="price">130.000₫</p>
-      </div>
-      <div class="product">
-        <img src="assets/img/sp8.png" alt="Sản phẩm 8">  
-        <h4>Matte Big Y Logo Brown Iphone Case</h4>
-        <p class="price">135.000₫</p>
-      </div>
-    </div>
+    <div class="products" id="product-list"></div>
   </main>
-<footer>
 
-<div class="store-system">
-    <h3>Hệ Thống Cửa Hàng</h3>
-    <ul>
-      <li><b>Chi Nhánh Hồ Chí Minh</b></li>
-      <li>Phường Sài Gòn - The New Playground, Tầng B1 Vincom Center Đồng Khởi, 72 Lê Thánh Tôn.</li>
-      <li>Phường An Lạc - Tầng 1 TTTM Aeon Mall Bình Tân, số 1 đường số 17A.</li>
-      <li>Phường Long Bình - Tầng 2 TTTM Vincom Mega Mall Grand Park.</li>
-      <li>Phường Hòa Hưng - 561 Sư Vạn Hạnh.</li>
-      <li>Phường Cầu Ông Lãnh - 160 Nguyễn Cư Trinh.</li>
-      <li>Phường Sài Gòn - The New Playground 26 Lý Tự Trọng.</li>
-      <li>Phường Gò Vấp - 326 Quang Trung.</li>
-      <li>Phường Thủ Dầu Một - 28 Yersin.</li>
-      <br>
-      <li><b>Chi Nhánh Đồng Nai:</b></li>
-      <li>Phường Tam Hiệp - 151A Phan Trung.</li>
-      <br>
-      <li><b>Chi Nhánh Cần Thơ:</b></li>
-      <li>Phường Ninh Kiều - 52 Mậu Thân.</li>
-      <br>
-      <li><b>Chi Nhánh Hà Nội:</b></li>
-      <li>Phường Dương Nội - Tầng 2 TTTM Aeon Mall Hà Đông Khu dân cư Hoàng Văn Thụ.</li>
-      <br>
-      <li><b>Chi Nhánh Hải Phòng:</b></li>
-      <li>Phường An Biên - Tầng 2 TTTM Aeon Mall Hải Phòng Lê Chân số 10 Võ Nguyên Giáp.</li>
-    </ul>
+  <!-- Footer -->
+  <footer>
+    <div class="store-system">
+      <h3>Hệ Thống Cửa Hàng</h3>
+      <ul>
+        <li><b>Chi Nhánh Hồ Chí Minh</b></li>
+        <li>Phường Sài Gòn - The New Playground, Tầng B1 Vincom Center Đồng Khởi, 72 Lê Thánh Tôn.</li>
+        <li>Phường An Lạc - Tầng 1 TTTM Aeon Mall Bình Tân, số 1 đường số 17A.</li>
+        <li>Phường Long Bình - Tầng 2 TTTM Vincom Mega Mall Grand Park.</li>
+      </ul>
+      <p><b>Hotline:</b> 0933 800 190</p>
+    </div>
+    <small>Copyright © 2025 Dirty Coins Studio. Powered by Sapo</small>
+  </footer>
 
-    <p><b>Hotline:</b> 0933 800 190 - 1900252557</p>
-    <p><b>Email:</b> csteamdcs@gmail.com</p>
-</div>
-
-<small>Copyright © 2025 Dirty Coins Studio. Powered by Sapo</small>
-</footer>
-
-  <!-- Nhúng file JS -->
+  <!-- JS -->
   <script src="assets/js/data.js"></script>
+  <script src="assets/js/renderdata.js"></script>
+  <script src="assets/js/check.js"></script>
 </body>
 </html>

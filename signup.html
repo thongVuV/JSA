@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký thành viên mới</title>
+  <link rel="stylesheet" href="assets/css/signup.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-box">
+      <h2>ĐĂNG KÝ THÀNH VIÊN MỚI</h2>
+      <form id="signupForm">
+        <label for="signup-firstname">Tên</label>
+        <input type="text" id="signup-firstname" placeholder="Tên" required>
+
+        <label for="signup-lastname">Họ</label>
+        <input type="text" id="signup-lastname" placeholder="Họ" required>
+
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" placeholder="Email" required>
+
+        <label for="signup-phone">Số điện thoại</label>
+        <input type="tel" id="signup-phone" placeholder="Số điện thoại" required pattern="[0-9]{9,11}" title="Chỉ nhập số, từ 9–11 ký tự">
+
+        <label for="signup-password">Mật khẩu</label>
+        <input type="password" id="signup-password" placeholder="Mật khẩu" required minlength="6">
+
+        <input type="submit" value="Đăng ký">
+      </form>
+
+      <div class="signup-link">
+        Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/signup.js"></script>
+</body>
+</html>
