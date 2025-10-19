@@ -133,18 +133,35 @@ header h1 {
 }
 
 /* ===== BUTTON STYLE (nếu sau này thêm nút) ===== */
-.btn {
-  display: inline-block;
-  padding: 14px 22px;
-  margin-top: 15px;
-  font-size: 15px;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
+.actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .add-cart {
+      background: black;
+      color: white;
+    }
+    .add-cart:hover {
+      background: #333;
+    }
+    .buy-now {
+      background: #ff4d4d;
+      color: white;
+    }
+    .buy-now:hover {
+      background: #ff1a1a;
+    }
+    
 .btn-black {
   background: #000;
   color: #fff;

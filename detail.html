@@ -26,6 +26,13 @@
       <p><b>Người mẫu:</b> <span id="product-model"></span></p>
       <p><b>Kích cỡ:</b> <span id="product-sizes"></span></p>
       <div id="size-chart"></div>
+
+            <!-- Nút thao tác -->
+      <div class="actions">
+        <button class="btn buy-now" id="buyNowBtn">Mua ngay</button>
+        <button onclick="addToCart(product)">🛒 Thêm vào giỏ hàng</button>
+
+      </div>
     </div>
   </main>
 
@@ -54,6 +61,46 @@
     } else {
       document.body.innerHTML = "<h2>Không tìm thấy sản phẩm!</h2>";
     }
+
+    // ========== Xử lý giỏ hàng ==========
+    function getCart() {
+      return JSON.parse(localStorage.getItem("cart")) || [];
+    }
+
+    function saveCart(cart) {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    function addToCart(item) {
+      let cart = getCart();
+      const existing = cart.find(c => c.name === item.name);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ ...item, quantity: 1 });
+      }
+      saveCart(cart);
+    }
+
+    // ====== Nút “Thêm vào giỏ hàng” ======
+    document.getElementById("addToCartBtn").addEventListener("click", () => {
+      addToCart(product);
+      alert(`Đã thêm "${product.name}" vào giỏ hàng!`);
+    });
+
+    // ====== Nút “Mua ngay” ======
+    document.getElementById("buyNowBtn").addEventListener("click", () => {
+      addToCart(product);
+      window.location.href = "cart.html"; // chuyển đến trang giỏ hàng
+    });
+
+  function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Đã thêm vào giỏ hàng!");
+}
+
   </script>
 </body>
 </html>

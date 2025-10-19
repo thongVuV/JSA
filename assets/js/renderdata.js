@@ -25,3 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+const productList = document.getElementById("product-list");
+
+function renderProducts() {
+  productList.innerHTML = products.map(p => `
+    <div class="product">
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.price.toLocaleString("vi-VN")}₫</p>
+      <button class="add-to-cart" data-id="${p.id}">Thêm vào giỏ</button>
+    </div>
+  `).join("");
+
+  // Gắn sự kiện click sau khi render
+  document.querySelectorAll(".add-to-cart").forEach(btn => {
+    btn.addEventListener("click", () => addToCart(btn.dataset.id));
+  });
+}
+
+renderProducts();

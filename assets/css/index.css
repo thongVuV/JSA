@@ -115,6 +115,61 @@ nav a:hover {
   border-radius: 50%;
   padding: 2px 6px;
 }
+/* Dropdown giỏ hàng */
+#cartMenu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 250px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  z-index: 1000;
+}
+
+#cartMenu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+#cartMenu li:last-child {
+  border: none;
+  justify-content: center;
+}
+
+#cartMenu button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#cartMenu button:hover {
+  background: #333;
+}
+
+.cart-item-name {
+  flex: 1;
+  margin-left: 6px;
+}
+
+.cart-item-remove {
+  color: red;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
 
 
 /* Container sản phẩm */

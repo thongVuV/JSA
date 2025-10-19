@@ -100,30 +100,6 @@ if (!localStorage.getItem("products")) {
       image: "sp8.png",
       chart: ""
     },
-    {
-      id: 9,
-      name: "DirtyCoins Patch Star Hoodie",
-      price: "550.000₫",
-      material: "Fleece Cotton",
-      sizes: ["M", "L", "XL"],
-      fit: "Loose Fit",
-      details: ["Front star patch", "Warm inner fleece"],
-      model: "Male model 1m78 wearing size L.",
-      image: "sp9.png",
-      chart: "sizechart.png"
-    },
-    {
-      id: 10,
-      name: "DirtyCoins Logo Shorts Red",
-      price: "300.000₫",
-      material: "Cotton",
-      sizes: ["S", "M", "L", "XL"],
-      fit: "Relax Fit",
-      details: ["Elastic waistband", "Printed logo on side"],
-      model: "Male model 1m80 wearing size L.",
-      image: "sp10.png",
-      chart: "sizechart.png"
-    }
   ];
   localStorage.setItem("products", JSON.stringify(products));
 }
